@@ -7,7 +7,7 @@ License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	fa39b36c13324ed5f3233698eda9de9f	
-URL:		http://www.ossp.org/pkg/lib/%{name}/
+URL:		http://www.ossp.org/pkg/lib/sio/
 Requires(post,postun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
