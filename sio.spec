@@ -1,14 +1,22 @@
+#
+# Conditional build:
+%bcond_without	tests	# don't perform "make check"
+#
 Summary:	OSSP sio - Stream I/O
 Summary(pl):	OSSP sio - biblioteka strumieni I/O
 Name:		sio
 Version:	0.9.2
-Release:	0.1
+Release:	0.2
 Epoch:		0
 License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/sio/%{name}-%{version}.tar.gz
 # Source0-md5:	fa39b36c13324ed5f3233698eda9de9f	
+Patch0:		%{name}-libs.patch
 URL:		http://www.ossp.org/pkg/lib/sio/
+BuildRequires:	al-devel
+#BuildRequires:	ex-devel
+BuildRequires:	sa-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,10 +61,16 @@ OSSP sio - biblioteka strumieni I/O - biblioteki statyczne.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure
+%configure \
+	--with-al \
+	--with-sa
+#	--with-ex \ # build fails; compiler bug?
 %{__make}
+
+%{?with_tests:%{__make} check}
 
 %install
 rm -rf $RPM_BUILD_ROOT
