@@ -3,12 +3,12 @@ Summary(pl):	OSSP sio - biblioteka strumieni I/O
 Name:		sio
 Version:	0.9.2
 Release:	0.1
+Epoch:		0
 License:	distributable (see README)
 Group:		Libraries
-Source0:	ftp://ftp.ossp.org/pkg/lib/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.ossp.org/pkg/lib/sio/%{name}-%{version}.tar.gz
 # Source0-md5:	fa39b36c13324ed5f3233698eda9de9f	
 URL:		http://www.ossp.org/pkg/lib/sio/
-Requires(post,postun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -18,7 +18,13 @@ protocols and includes capabilities to filter and multiplex data
 streams. Its modular structure is fully supported by the underlying
 OSSP al data buffer library.
 
-#%%description -l pl
+%description -l pl
+OSSP sio to biblioteka abstrakcji wej¶cia/wyj¶cia do warstwowej
+komunikacji strumieniowej. Zosta³a stworzona, aby wydajnie obs³ugiwaæ
+z³o¿one protoko³y wej¶cia/wyj¶cia i zawiera mo¿liwo¶ci filtrowania
+oraz multipleksowania strumieni danych. Jej modularna struktra jest w
+pe³ni obs³ugiwana przez le¿±c± poni¿ej bibliotekê buforowania danych
+OSSP al.
 
 %package devel
 Summary:	OSSP sio - Stream I/O - header files and development libraries
@@ -61,9 +67,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
