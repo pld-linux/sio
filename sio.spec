@@ -24,6 +24,7 @@ OSSP al data buffer library.
 Summary:	OSSP sio - Stream I/O - header files and development libraries
 Summary(pl):	OSSP sio - biblioteka strumieni I/O - pliki nag³ówkowe i biblioteki dla deweloperów
 Group:		Development/Libraries
+Requires:       %{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 OSSP sio - Stream I/O - header files and development libraries.
@@ -36,6 +37,7 @@ dla deweloperów.
 Summary:	OSSP sio - Stream I/O - static libraries
 Summary(pl):	OSSP sio - biblioteka strumieni I/O - biblioteki statyczne
 Group:		Development/Libraries
+Requires:       %{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 OSSP sio - Stream I/O - static libraries.
