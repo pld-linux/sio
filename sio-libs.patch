@@ -9,3 +9,12 @@
  
  $(TST_NAME): $(TST_OBJS) $(LIB_NAME)
  	@$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $(TST_NAME) $(TST_OBJS) $(LIB_NAME) $(LIBS)
+@@ -121,7 +121,7 @@
+ 	$(SHTOOL) install -c -m 755 sio-config $(DESTDIR)$(bindir)/
+ 	$(SHTOOL) install -c -m 644 sio.h $(DESTDIR)$(includedir)/
+ 	$(SHTOOL) install -c -m 644 $(MAN_NAME) $(DESTDIR)$(mandir)/man3/
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libsio.la $(DESTDIR)$(libdir)/
++	@$(LIBTOOL) --mode=install $(SHTOOL) install -c libsio.la $(DESTDIR)$(libdir)/
+ 
+ uninstall:
+ 	@$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(libdir)/libsio.la
