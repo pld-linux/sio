@@ -1,6 +1,7 @@
 #
-%bcond_without  static_libs # don't build static libraries
-%bcond_without	tests	# don't perform "make check"
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+%bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP sio - Stream I/O
 Summary(pl):	OSSP sio - biblioteka strumieni I/O
