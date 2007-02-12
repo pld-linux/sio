@@ -4,7 +4,7 @@
 %bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP sio - Stream I/O
-Summary(pl.UTF-8):   OSSP sio - biblioteka strumieni I/O
+Summary(pl.UTF-8):	OSSP sio - biblioteka strumieni I/O
 Name:		sio
 Version:	0.9.3
 Release:	0.1
@@ -37,7 +37,7 @@ OSSP al.
 
 %package devel
 Summary:	OSSP sio - Stream I/O - header files and development libraries
-Summary(pl.UTF-8):   OSSP sio - biblioteka strumieni I/O - pliki nagłówkowe i biblioteki dla deweloperów
+Summary(pl.UTF-8):	OSSP sio - biblioteka strumieni I/O - pliki nagłówkowe i biblioteki dla deweloperów
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -50,7 +50,7 @@ dla deweloperów.
 
 %package static
 Summary:	OSSP sio - Stream I/O - static libraries
-Summary(pl.UTF-8):   OSSP sio - biblioteka strumieni I/O - biblioteki statyczne
+Summary(pl.UTF-8):	OSSP sio - biblioteka strumieni I/O - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
