@@ -4,7 +4,7 @@
 %bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP sio - Stream I/O
-Summary(pl):	OSSP sio - biblioteka strumieni I/O
+Summary(pl.UTF-8):   OSSP sio - biblioteka strumieni I/O
 Name:		sio
 Version:	0.9.3
 Release:	0.1
@@ -27,37 +27,37 @@ protocols and includes capabilities to filter and multiplex data
 streams. Its modular structure is fully supported by the underlying
 OSSP al data buffer library.
 
-%description -l pl
-OSSP sio to biblioteka abstrakcji wej∂cia/wyj∂cia do warstwowej
-komunikacji strumieniowej. Zosta≥a stworzona, aby wydajnie obs≥ugiwaÊ
-z≥oøone protoko≥y wej∂cia/wyj∂cia i zawiera moøliwo∂ci filtrowania
+%description -l pl.UTF-8
+OSSP sio to biblioteka abstrakcji wej≈õcia/wyj≈õcia do warstwowej
+komunikacji strumieniowej. Zosta≈Ça stworzona, aby wydajnie obs≈Çugiwaƒá
+z≈Ço≈ºone protoko≈Çy wej≈õcia/wyj≈õcia i zawiera mo≈ºliwo≈õci filtrowania
 oraz multipleksowania strumieni danych. Jej modularna struktra jest w
-pe≥ni obs≥ugiwana przez leø±c± poniøej bibliotekÍ buforowania danych
+pe≈Çni obs≈Çugiwana przez le≈ºƒÖcƒÖ poni≈ºej bibliotekƒô buforowania danych
 OSSP al.
 
 %package devel
 Summary:	OSSP sio - Stream I/O - header files and development libraries
-Summary(pl):	OSSP sio - biblioteka strumieni I/O - pliki nag≥Ûwkowe i biblioteki dla deweloperÛw
+Summary(pl.UTF-8):   OSSP sio - biblioteka strumieni I/O - pliki nag≈Ç√≥wkowe i biblioteki dla deweloper√≥w
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 OSSP sio - Stream I/O - header files and development libraries.
 
-%description devel -l pl
-OSSP sio - biblioteka strumieni I/O - pliki nag≥Ûwkowe i biblioteki
-dla deweloperÛw.
+%description devel -l pl.UTF-8
+OSSP sio - biblioteka strumieni I/O - pliki nag≈Ç√≥wkowe i biblioteki
+dla deweloper√≥w.
 
 %package static
 Summary:	OSSP sio - Stream I/O - static libraries
-Summary(pl):	OSSP sio - biblioteka strumieni I/O - biblioteki statyczne
+Summary(pl.UTF-8):   OSSP sio - biblioteka strumieni I/O - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 OSSP sio - Stream I/O - static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 OSSP sio - biblioteka strumieni I/O - biblioteki statyczne.
 
 %prep
