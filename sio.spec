@@ -62,7 +62,7 @@ OSSP sio - biblioteka strumieni I/O - biblioteki statyczne.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %configure \
